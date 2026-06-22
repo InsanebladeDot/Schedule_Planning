@@ -1,0 +1,8 @@
+{
+  "name": "pink-task",
+  "version": "1.0.0",
+  "description": "日程任务表",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}

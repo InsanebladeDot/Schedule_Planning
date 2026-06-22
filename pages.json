@@ -1,0 +1,168 @@
+{
+
+  "pages": [
+
+    {
+      "path": "pages/weekly/weekly",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "打卡",
+        "navigationBarBackgroundColor": "#D5E0C1",
+        "backgroundColor": "#D5E0C1"
+      }
+    },
+
+    {
+
+      "path": "pages/timeline/timeline",
+
+      "style": {
+
+        "navigationBarTitleText": "时间轴",
+
+        "navigationBarBackgroundColor": "#D5E0C1",
+
+        "backgroundColor": "#D5E0C1"
+
+      }
+
+    },
+
+    {
+
+      "path": "pages/profile/profile",
+
+      "style": {
+
+        "navigationBarTitleText": "我的",
+
+        "navigationBarBackgroundColor": "#D5E0C1",
+
+        "backgroundColor": "#D5E0C1"
+
+      }
+
+    },
+
+    {
+
+      "path": "pages/settings/settings",
+
+      "style": {
+
+        "navigationBarTitleText": "设置",
+
+        "navigationBarBackgroundColor": "#D5E0C1",
+
+        "backgroundColor": "#D5E0C1"
+
+      }
+
+    },
+
+    {
+
+      "path": "pages/tasks/all",
+
+      "style": {
+
+        "navigationBarTitleText": "全部任务",
+
+        "navigationBarBackgroundColor": "#D5E0C1",
+
+        "backgroundColor": "#D5E0C1"
+
+      }
+
+    },
+
+    {
+
+      "path": "pages/tasks/done",
+
+      "style": {
+
+        "navigationBarTitleText": "已完成",
+
+        "navigationBarBackgroundColor": "#D5E0C1",
+
+        "backgroundColor": "#D5E0C1"
+
+      }
+
+    },
+
+    {
+
+      "path": "pages/task/edit",
+
+      "style": {
+
+        "navigationStyle": "custom",
+
+        "backgroundColor": "#D5E0C1"
+
+      }
+
+    }
+
+  ],
+
+  "globalStyle": {
+
+    "navigationBarTextStyle": "black",
+
+    "navigationBarTitleText": "PinkTask",
+
+    "navigationBarBackgroundColor": "#D5E0C1",
+
+    "backgroundColor": "#D5E0C1"
+
+  },
+
+  "tabBar": {
+
+    "custom": true,
+
+    "color": "#A8A896",
+
+    "selectedColor": "#E58B88",
+
+    "backgroundColor": "#FFFFFF",
+
+    "borderStyle": "white",
+
+    "list": [
+
+      {
+
+        "pagePath": "pages/weekly/weekly",
+
+        "text": "周期表"
+
+      },
+
+      {
+
+        "pagePath": "pages/timeline/timeline",
+
+        "text": "时间轴"
+
+      },
+
+      {
+
+        "pagePath": "pages/profile/profile",
+
+        "text": "我的"
+
+      }
+
+    ]
+
+  },
+
+  "uniIdRouter": {}
+
+}
+

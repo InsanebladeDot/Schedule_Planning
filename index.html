@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      ;(function () {
+        try {
+          function parseStored(val) {
+            if (val == null || val === '') return null
+            try {
+              return JSON.parse(val)
+            } catch (e) {
+              return val
+            }
+          }
+          function isDarkValue(val) {
+            return val === true || val === 'true' || val === 1 || val === '1'
+          }
+          var dark = isDarkValue(parseStored(localStorage.getItem('dark_mode')))
+          if (!dark) {
+            var settings = parseStored(localStorage.getItem('schedule_settings'))
+            if (settings && typeof settings === 'object') {
+              dark = !!settings.darkMode
+            }
+          }
+          if (dark) {
+            var de = document.documentElement
+            de.classList.add('theme-dark')
+            de.style.backgroundColor = '#2A2E24'
+            de.style.colorScheme = 'dark'
+            de.style.setProperty('--theme-bg', '#2A2E24')
+            var meta = document.querySelector('meta[name="theme-color"]')
+            if (!meta) {
+              meta = document.createElement('meta')
+              meta.name = 'theme-color'
+              document.head.appendChild(meta)
+            }
+            meta.content = '#2A2E24'
+          } else {
+            document.documentElement.style.backgroundColor = '#D5E0C1'
+            document.documentElement.style.setProperty('--theme-bg', '#D5E0C1')
+          }
+        } catch (e) {}
+      })()
+      var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+        CSS.supports('top: constant(a)'))
+      document.write(
+        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+        (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+    </script>
+    <title></title>
+    <!--preload-links-->
+    <!--app-context-->
+  </head>
+  <body>
+    <div id="app"><!--app-html--></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
